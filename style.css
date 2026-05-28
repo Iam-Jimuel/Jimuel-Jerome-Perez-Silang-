@@ -1,0 +1,186 @@
+/* ==============================================
+   style.css – Custom Styles & Dark Mode Overrides
+   ============================================== */
+
+/* Base transition for theme switching */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode class (added to <html>) */
+html.dark body {
+  background-color: #001a2e; /* navyDark */
+  color: #FDF0D5; /* cream */
+}
+
+/* Navbar dark mode */
+html.dark nav {
+  background-color: rgba(0, 26, 46, 0.9);
+  border-bottom-color: rgba(253, 240, 213, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+/* General dark mode text overrides */
+html.dark .text-navy,
+html.dark .text-navy\/70,
+html.dark .text-navy\/60,
+html.dark .text-navy\/50,
+html.dark .text-navy\/40,
+html.dark .text-navy\/30,
+html.dark .text-navy\/20,
+html.dark .text-navy\/10 {
+  color: #FDF0D5;
+}
+
+html.dark .text-navy\/70,
+html.dark .text-navy\/60,
+html.dark .text-navy\/50,
+html.dark .text-navy\/40,
+html.dark .text-navy\/30,
+html.dark .text-navy\/20,
+html.dark .text-navy\/10 {
+  opacity: 0.7;
+}
+
+/* Background swaps for non-contact sections */
+html.dark .bg-cream {
+  background-color: #001a2e;
+}
+
+/* Buttons with navy background and cream text */
+html.dark .bg-navy.text-cream {
+  background-color: #FDF0D5;
+  color: #003049;
+}
+html.dark .bg-navy.text-cream:hover {
+  background-color: #f5e0b8;
+}
+
+/* Transparent navy backgrounds */
+html.dark .bg-navy\/10,
+html.dark .bg-navy\/5,
+html.dark .bg-navy\/8 {
+  background-color: rgba(253, 240, 213, 0.1);
+}
+
+/* Dark mode borders */
+html.dark .border-navy\/10,
+html.dark .border-navy\/15,
+html.dark .border-navy\/20,
+html.dark .border-navy\/30 {
+  border-color: rgba(253, 240, 213, 0.15);
+}
+
+/* Hover states */
+html.dark .hover\:bg-navy\/5:hover {
+  background-color: rgba(253, 240, 213, 0.08);
+}
+
+/* Certificate card in dark mode */
+html.dark .certificate-card {
+  background: linear-gradient(135deg, #002b47, #001a2e);
+  border-color: rgba(253, 240, 213, 0.3);
+}
+html.dark .certificate-card h3,
+html.dark .certificate-card p {
+  color: #FDF0D5;
+}
+
+/* Project card gradient in dark mode */
+html.dark .project-card .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, #FDF0D5, #f5e0b8);
+}
+html.dark .project-card .bg-gradient-to-br svg {
+  color: #003049;
+}
+
+/* Nav links active state */
+.nav-link.active {
+  color: #003049;
+  background-color: rgba(0, 48, 73, 0.08);
+}
+html.dark .nav-link.active {
+  color: #FDF0D5;
+  background-color: rgba(253, 240, 213, 0.15);
+}
+
+/* Mobile menu transition */
+#mobileMenu {
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* Carousel dot active */
+.carousel-dot.active {
+  background-color: #003049;
+  width: 1.5rem;
+  border-radius: 9999px;
+}
+html.dark .carousel-dot.active {
+  background-color: #FDF0D5;
+}
+
+/* ========== CONTACT SECTION DARK MODE FIX ========== */
+/* Keep the contact section background navy (or slightly darker) and adjust inner elements */
+html.dark #contact {
+  background-color: #001a2e; /* navyDark, matches body */
+}
+
+/* Ensure all cream-text elements stay light and readable */
+html.dark #contact .text-cream,
+html.dark #contact .text-cream\/70,
+html.dark #contact .text-cream\/50,
+html.dark #contact .text-cream\/40,
+html.dark #contact .text-cream\/30,
+html.dark #contact .text-cream\/20,
+html.dark #contact h2,
+html.dark #contact h3,
+html.dark #contact p,
+html.dark #contact a {
+  color: #FDF0D5;
+}
+
+/* Subtle background for contact cards – use a very low opacity cream */
+html.dark #contact .bg-cream\/5,
+html.dark #contact .bg-cream\/10,
+html.dark #contact .bg-cream\/15 {
+  background-color: rgba(253, 240, 213, 0.06);
+}
+
+/* Borders for cards */
+html.dark #contact .border-cream\/15,
+html.dark #contact .border-cream\/20 {
+  border-color: rgba(253, 240, 213, 0.2);
+}
+
+/* Hover effect for contact cards */
+html.dark #contact .hover\:bg-cream\/10:hover {
+  background-color: rgba(253, 240, 213, 0.12);
+}
+
+/* Map placeholder text */
+html.dark #contact .text-cream\/50.italic {
+  color: rgba(253, 240, 213, 0.6);
+}
+
+/* Footer border */
+html.dark #contact .border-cream\/15 {
+  border-color: rgba(253, 240, 213, 0.15);
+}
+
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF0D5;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #001a2e;
+}
+::-webkit-scrollbar-thumb {
+  background: #003049;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #FDF0D5;
+}
